@@ -1,11 +1,13 @@
 #include <iostream>
 
 #include "heap.h"
+#include "metodos_generales.h"
 using namespace std;
 
 int main()
 {
-    heap<int> h;
+    heap<int,std::vector> h;
+
     load_from("data.txt", h);
     cout << "heap" << endl;
     cout << h;
@@ -18,6 +20,7 @@ int main()
     cout << h;
     cout << "heap" << endl;
     cout << h;
+    cout << "Ingrese un valor: ";
     cin >> h;
     cout << "heap" << endl;
     cout << h;
@@ -26,5 +29,7 @@ int main()
     cout << h;
     load_from("data.txt", h);
     cout << h;
+
+
     return 0;
 }
